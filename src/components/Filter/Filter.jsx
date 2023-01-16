@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { filterValue } from 'redux/filterSlice';
-import { getFilter, getContacts, getIsLoading } from 'redux/selectors';
+import { selectFilter, selectContacts, selectIsLoading } from 'redux/selectors';
 import { Label } from './Filter.styled';
 
 const FilterByName = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(getFilter);
-  const contacts = useSelector(getContacts);
-  const isLoading = useSelector(getIsLoading);
+  const filter = useSelector(selectFilter);
+  const contacts = useSelector(selectContacts);
+  const isLoading = useSelector(selectIsLoading);
 
   const setFilterValue = ({ target: { value } }) => {
     dispatch(filterValue(value));
