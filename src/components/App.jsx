@@ -17,7 +17,7 @@ const App = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  error !== null && toast('Something went wrong!');
+  error !== null && toast('Something went wrong! Try refresh the Page');
 
   return (
     <>
